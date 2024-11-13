@@ -28,4 +28,4 @@ This Android application calculates **Truth Tables** and evaluates **Boolean log
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/truth-table-boolean-logic.git
+   git clone https://github.com/ZvonitCodi/TruthTableandBooleanLogicApplication.git
