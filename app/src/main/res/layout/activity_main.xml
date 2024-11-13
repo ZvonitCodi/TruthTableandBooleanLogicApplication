@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp"
+    android:background="#FFC8C8">
+
+    <!-- Clue Text and Image (positioned at the top) -->
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp">
+
+        <!-- Clue Text -->
+        <TextView
+            android:id="@+id/clueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clue:"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/clueImage"
+            android:layout_width="361dp"
+            android:layout_height="175dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="Clue image"
+            android:src="@drawable/clue" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/inputFormula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter the logical formula"
+        android:inputType="text"
+        android:padding="20dp" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_below="@id/inputFormula"
+        android:backgroundTint="#FF4F2D"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ScrollView for other outputs -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculateButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rpnOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Formula in RPN:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/variablesOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Variables:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TableLayout
+                android:id="@+id/truthTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/zhegalkinOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zhegalkin polynomial:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/sdnfOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SDNF:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/sknfOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SKNF:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
